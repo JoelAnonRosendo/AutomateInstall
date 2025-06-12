@@ -1,8 +1,8 @@
-Editar player.py
+# Editar player.py
 
-¡Es necesario tener instalado Python y estas dependencias de acontinuacion!
-python -m pip install requests
-python -m pip install pyinstaller
+### ¡Es necesario tener instalado Python y estas dependencias de acontinuacion!
+#### python -m pip install requests
+#### python -m pip install pyinstaller
 
 
 Si se quiere cambiar nombres o agregar servicios al .py.
@@ -18,3 +18,9 @@ Una vez editado el documento .py realizaremos estas acciones
 5._ Y por ultimo el exe se generara en la carpeta dist que esta en D:\dist, copias el exe y lo pones en D:\.
     ¡La carpeta dist esta oculta!
 6._ Ya se puede ejecutar el exe.
+
+## Para catualizar la version de los .exe
+
+Aparte de cambiarlo en su carpeta respectiva se debe cambiar el el player.py
+
+"exe_filename": "Nuevo.exe",
