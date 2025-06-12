@@ -30,7 +30,7 @@ Una vez editado el documento .py realizaremos estas acciones
     
 6._ Ya se puede ejecutar el exe.
 
-## Para catualizar la version de los .exe
+## Para atualizar la version de los .exe
 
 Aparte de cambiarlo en su carpeta respectiva se debe cambiar el el player.py
 
