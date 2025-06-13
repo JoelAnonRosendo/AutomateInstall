@@ -1,71 +1,23 @@
-# AutomateInstall
-Automatización de instalación
+# AutomateInstall: Asistente de Configuración Automatizada
 
+Este proyecto (`player.py`) proporciona una interfaz gráfica para automatizar la instalación y configuración de aplicaciones en sistemas Windows. Permite seleccionar programas y realizar acciones como instalaciones silenciosas, asistidas o configuraciones específicas.
 
-## WARNING --> Remplazar los .exe de la carpeta Programas por los verdaderos exe debido a que los que hay son txt
+---
+## ⚠️ ADVERTENCIAS IMPORTANTES ⚠️
 
-# Editar player.py
+*   **REEMPLAZAR ARCHIVOS `.EXE` DE EJEMPLO:** La carpeta `Programas/` distribuida con este script podría contener archivos de texto (`.txt`) renombrados como `.exe` (o simplemente ser marcadores de posición vacíos). **DEBES REEMPLAZARLOS por los archivos instaladores `.exe` REALES y correspondientes a cada aplicación antes de usar el script o compilarlo.** El script no funcionará correctamente sin los instaladores válidos.
+*   **PYTHON ES NECESARIO (PARA DESARROLLO/MODIFICACIÓN):** Para ejecutar el script directamente (`python player.py`) o para modificarlo, necesitas tener Python instalado en tu sistema.
+*   **CONFIGURACIÓN DE RUTAS:** El script está configurado por defecto para buscar programas en `D:/Programas`. Si tus instaladores están en otra ubicación, deberás editar la variable `PROGRAMAS_DIR` dentro del archivo `player.py`.
 
-### ¡Es necesario tener instalado Python y estas dependencias de acontinuacion!
-#### python -m pip install requests
-#### python -m pip install pyinstaller
-
-
-Si se quiere cambiar nombres o agregar servicios al .py.
-
-Una vez editado el documento .py realizaremos estas acciones
-
-1._ Iniciar PowerShell en modo administrador.
-
-2._ Ir a la raiz donde esta el .py es decir D:\
-
-3._ Ejecutar este comando para limpiar todo lo que tenga que ver con el ejecutable
-    Remove-Item -Recurse -Force build, dist
-    
-4._ Ahora bolberemos a crear el exe y para eso escribimos el siguiente comando.
-    pyinstaller --onefile --windowed --hidden-import=requests player.py
-    
-5._ Y por ultimo el exe se generara en la carpeta dist que esta en D:\dist, copias el exe y lo pones en D:\.
-    ¡La carpeta dist esta oculta!
-    
-6._ Ya se puede ejecutar el exe.
-
-## Para atualizar la version de los .exe
-
-Aparte de cambiarlo en su carpeta respectiva se debe cambiar el el player.py
-
-"exe_filename": "Nuevo.exe",
-
-
-
-
-
-
-
-
-
-
-
-
-# Asistente de Configuración de PC (Player Setup)
-
-Este script de Python (`player.py`) proporciona una interfaz gráfica de usuario (GUI) para automatizar la instalación y configuración de una serie de aplicaciones predefinidas en un sistema Windows.
-
-## Características
-
-*   Interfaz gráfica sencilla para seleccionar aplicaciones.
-*   Instalación de aplicaciones desde archivos locales (`.exe`).
-*   Configuración automática de "Autologon" (requiere `pywinauto`).
-*   Instalación manual asistida para aplicaciones que lo requieran (ej. NovaLCT).
-*   Copia de archivos a la carpeta "Documentos".
-*   Barra de progreso y mensajes de estado durante las operaciones.
-
-## Prerrequisitos
+---
+## 🛠️ Prerrequisitos
 
 1.  **Sistema Operativo:** Windows.
-2.  **Python:** Python 3.x (se recomienda 3.7 o superior). Asegúrate de que Python esté añadido al PATH del sistema durante la instalación.
+2.  **Python:** Python 3.x (se recomienda 3.7 o superior). Asegúrate de que Python esté añadido al PATH del sistema.
+    *   La biblioteca **`tkinter`** (para la GUI) debe estar disponible. Usualmente viene con Python en Windows.
 3.  **PIP:** El gestor de paquetes de Python (normalmente se instala con Python).
-4.  **Archivos de Programa/Instaladores:** Este es el requisito más importante. El script espera que los archivos ejecutables (.exe) de los programas a instalar estén ubicados en una estructura de carpetas específica dentro de `D:/Programas`. Debes crear esta estructura y colocar los archivos correspondientes:
+4.  **Archivos de Programa/Instaladores (¡REALES!):**
+    Coloca los instaladores `.exe` reales en la siguiente estructura dentro de `D:/Programas` (o la ruta que configures en `PROGRAMAS_DIR` en el script):
 
     ```
     D:
@@ -84,11 +36,10 @@ Este script de Python (`player.py`) proporciona una interfaz gráfica de usuario
             └── Ninite VLC Installer.exe
     ```
 
-    *   **Nota:** Si tu unidad principal no es `D:` o deseas usar una ruta diferente para los programas, deberás modificar la variable `PROGRAMAS_DIR` al principio del archivo `player.py`.
+---
+## 📦 Instalación de Dependencias de Python
 
-## Instalación de Dependencias de Python
-
-Antes de ejecutar el script, necesitas instalar las bibliotecas de Python requeridas. Abre una terminal o Símbolo del sistema (CMD) y ejecuta:
+Para que el script `player.py` funcione (ya sea ejecutándolo directamente o antes de compilarlo a un `.exe`), necesitas instalar las siguientes dependencias. Abre una terminal (CMD o PowerShell) y ejecuta estos comandos uno por uno:
 
 ```bash
-pip install requests pywinauto
+python -m pip install requests
