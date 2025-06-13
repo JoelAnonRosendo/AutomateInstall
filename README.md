@@ -66,3 +66,13 @@ En el caso improbable de que `tkinter` no esté presente (lo que podría ocurrir
 En sistemas basados en Debian/Ubuntu (Linux), si Python fue instalado sin Tk, se instalaría con:
 ```bash
 sudo apt-get install python3-tk
+```
+---
+## 📜 Licencia
+
+Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo.
+
+---
+## 👤 Autor
+
+Desarrollado por Joel Añón Rosendo.
