@@ -66,8 +66,8 @@ Explicación del comando:
 *   `--windowed`: Indica que es una aplicación con interfaz gráfica (GUI) y no debe abrirse una ventana de consola al ejecutar el `.exe`.
 *   `--hidden-import=requests`: Asegura que la biblioteca `requests` (y cualquier otra que `PyInstaller` pueda no detectar automáticamente) se incluya correctamente en el ejecutable. Si usas otras bibliotecas que `PyInstaller` podría omitir, puedes añadirlas aquí de forma similar (ej. `--hidden-import=otralib`).
 *   `player.py`: Es el nombre de tu script principal.
-
 Después de que el comando se complete, encontrarás el archivo `player.exe` (o el nombre que `PyInstaller` le asigne por defecto si no lo especificas con `--name`) dentro de una subcarpeta llamada `dist` en el mismo directorio. Este archivo `.exe` ya no requiere Python ni las dependencias para ejecutarse en otras máquinas Windows.
+
 ---
 ## 🐍 Cómo instalar Tkinter
 
