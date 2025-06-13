@@ -6,7 +6,7 @@ Este proyecto (`player.py`) proporciona una interfaz gráfica para automatizar l
 ## ⚠️ ADVERTENCIAS IMPORTANTES ⚠️
 
 *   **REEMPLAZAR ARCHIVOS `.EXE` DE EJEMPLO:** La carpeta `Programas/` distribuida con este script podría contener archivos de texto (`.txt`) renombrados como `.exe` (o simplemente ser marcadores de posición vacíos). **DEBES REEMPLAZARLOS por los archivos instaladores `.exe` REALES y correspondientes a cada aplicación antes de usar el script o compilarlo.** El script no funcionará correctamente sin los instaladores válidos.
-*   **PYTHON ES NECESARIO (PARA DESARROLLO/MODIFICACIÓN):** Para ejecutar el script directamente (`python player.py`) o para modificarlo, necesitas tener Python instalado en tu sistema.
+*   **PYTHON ES NECESARIO (PARA DESARROLLO/MODIFICACIÓN):** Para ejecutar el script directamente (`python player.py`) o para modificarlo, necesitas tener Python instalado en tu sistema y las dependencias necesarias.
 *   **CONFIGURACIÓN DE RUTAS:** El script está configurado por defecto para buscar programas en `D:/Programas`. Si tus instaladores están en otra ubicación, deberás editar la variable `PROGRAMAS_DIR` dentro del archivo `player.py`.
 
 ---
@@ -43,3 +43,5 @@ Para que el script `player.py` funcione (ya sea ejecutándolo directamente o ant
 
 ```bash
 python -m pip install requests
+python -m pip install pywinauto
+python -m pip install pyinstaller
