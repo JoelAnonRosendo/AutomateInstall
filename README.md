@@ -6,7 +6,7 @@ Este proyecto (`player.py`) proporciona una interfaz gráfica para automatizar l
 ## ⚠️ ADVERTENCIAS IMPORTANTES ⚠️
 
 *   **REEMPLAZAR ARCHIVOS `.EXE` DE EJEMPLO:** La carpeta `Programas/` distribuida con este script podría contener archivos de texto (`.txt`) renombrados como `.exe` (o simplemente ser marcadores de posición vacíos). **DEBES REEMPLAZARLOS por los archivos instaladores `.exe` REALES y correspondientes a cada aplicación antes de usar el script o compilarlo.** El script no funcionará correctamente sin los instaladores válidos.
-*   **PYTHON ES NECESARIO (PARA DESARROLLO/MODIFICACIÓN):** Para ejecutar el script directamente (`python player.py`) o para modificarlo, necesitas tener Python instalado en tu sistema y las dependencias necesarias.
+*   **PYTHON Y DEPENDENCIAS (SOLO PARA MODIFICAR Y RECOMPILAR):** Si solo vas a ejecutar el archivo `.exe` proporcionado, **no necesitas instalar Python ni ninguna de sus dependencias**. Sin embargo, si planeas modificar el código fuente (`player.py`) y necesitas generar un nuevo archivo `.exe`, entonces sí necesitarás tener Python instalado en tu sistema junto con las dependencias listadas más abajo.
 *   **CONFIGURACIÓN DE RUTAS:** El script está configurado por defecto para buscar programas en `D:/Programas`. Si tus instaladores están en otra ubicación, deberás editar la variable `PROGRAMAS_DIR` dentro del archivo `player.py`.
 
 ---
@@ -49,3 +49,12 @@ python -m pip install pywinauto
 ```
 ```bash
 python -m pip install pyinstaller
+```
+---
+## 🐍 Cómo instalar Tkinter
+
+Tkinter es parte de la biblioteca estándar de Python y, por lo general, **ya viene incluido** con las instalaciones de Python en Windows. No suele requerir una instalación separada.
+
+Para verificar si `tkinter` está disponible, puedes abrir una terminal de Python (escribe `python` y presiona Enter) e intentar importar el módulo:
+```python
+import tkinter
