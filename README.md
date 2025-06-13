@@ -58,3 +58,11 @@ Tkinter es parte de la biblioteca estándar de Python y, por lo general, **ya vi
 Para verificar si `tkinter` está disponible, puedes abrir una terminal de Python (escribe `python` y presiona Enter) e intentar importar el módulo:
 ```python
 import tkinter
+```
+Si no recibes ningún error, `tkinter` está instalado y listo para usarse.
+
+En el caso improbable de que `tkinter` no esté presente (lo que podría ocurrir con instalaciones de Python muy personalizadas o mínimas), la forma más sencilla de obtenerlo es reinstalar Python desde [python.org](https://www.python.org/downloads/windows/), asegurándote de que la opción "tcl/tk and IDLE" (o similar, referente a Tk) esté seleccionada durante el proceso de instalación.
+
+En sistemas basados en Debian/Ubuntu (Linux), si Python fue instalado sin Tk, se instalaría con:
+```bash
+sudo apt-get install python3-tk
