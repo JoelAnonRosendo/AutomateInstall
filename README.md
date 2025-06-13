@@ -43,5 +43,9 @@ Para que el script `player.py` funcione (ya sea ejecutándolo directamente o ant
 
 ```bash
 python -m pip install requests
+```
+```bash
 python -m pip install pywinauto
+```
+```bash
 python -m pip install pyinstaller
